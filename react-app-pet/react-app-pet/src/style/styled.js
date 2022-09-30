@@ -1,47 +1,50 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
+//BLOCO DE LISTA DE PETS
 export const DivLista = styled.div`
   width: 100%;
   padding: 20px;
-  min-height: 85vh;
-  background-color: #ccc;
-  display: flex; flex-wrap: wrap;
-  justify-content: space-around;
-
-  .btnTarefa {
-    display: block;
-    height: 8vh;
-    margin: auto;
-    border-radius: 5px;
-    padding: 1vh 2vw;
-    border: solid 2px #00ff00;
-    color: #00ff00;
-    font-size: 1.5rem;
-  }
-`;
-
+  min-height: 95vh;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+`
+//BLOCO DE CADASTRO, APARECE QUANDO ADICIONA AS INFO DO PET
 export const DivCadastro = styled.div`
-  background-color: #ffb;
-  border: 2px solid #333;
+  background-color: rgba(0, 0, 0, 0.40);
+  color: #fff;
+  border: 1px solid #333;
   box-shadow: 5px 5px 5px #333;
   padding: 20px;
   text-align: center;
-  width: 350px;
-  height: 200px;
+  width: 400px;
+  height: 300px;
   margin: 10px;
-  h2,
-  p {
-    padding-bottom: 10px;
-  }
-`;
 
-export const Botao = styled.button`
-  border-radius: 5px;
-  padding: 1vh 2vw;
-  margin: auto;
-  display: block;
-  border: solid 2px #00ff00;
-  color: #00ff00;
-  font-size: 1.5rem;
 `
+export const DivForm = styled.div`
   
+  label {
+    color: #FFF;
+  }
+  input {
+    width: 50%;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+    background-color: #525252;
+    color: #FFF;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #084EDC;
+  }
+`

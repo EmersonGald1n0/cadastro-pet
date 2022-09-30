@@ -1,17 +1,27 @@
 import React, { useState } from 'react'
 import Cadastro from '../cadastro/Cadastro'
 import { DivLista } from '../../style/styled'
-import FormCadastro from '../formCadastro/FormCadastro'
+import FormPet from '../formPet/FormPet'
 
 export default function PetCadastro() {
-  const [cadastro, setCadastro] = useState([
-
+  const [cadastroPets, setCadastroPets] = useState([
+    {
+      nome: "Toddy",
+      idade: "5 anos",
+      raca: "Shih-Tzu",
+      tamanho: "Pequeno",
+      dono: "Emerson",
+      tel: "(11) 4002-8922",
+      // foto
+      observacoes: "Não é agressivo",
+    },
   ]);
+  
 
   const addCadastro = (e) => {
     e.preventDefault();
     setNovoCadastro({nome:"", idade:"", raca:"", tamanho:"", dono:"", tel:"", foto:"", observacoes:""})
-    setCadastro([...cadastro, novoCadastro]);
+    setCadastroPets([...cadastroPets, novoCadastro]);
   }
 
   const [novoCadastro, setNovoCadastro] = useState({nome:"", idade:"", raca:"", tamanho:"", dono:"", tel:"", foto:"", observacoes:""});
@@ -40,12 +50,12 @@ export default function PetCadastro() {
 
   return (
     <DivLista>
-      <FormCadastro 
+      <FormPet 
         funcaoAddCadastro={addCadastro}
         novoCadastro={novoCadastro}
         funcaoCaptura={captura}
       />
-      {cadastro.map((cad, i) => (
+      {cadastroPets.map((cad, i) => (
         <Cadastro
           key={i}
           nome = {cad.nome}
