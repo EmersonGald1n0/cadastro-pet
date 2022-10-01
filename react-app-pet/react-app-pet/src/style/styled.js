@@ -14,11 +14,11 @@ export const DivLista = styled.div`
 export const DivCadastro = styled.div`
   background-color: rgba(0, 0, 0, 0.40);
   color: #fff;
-  border: 1px solid #333;
-  box-shadow: 5px 5px 5px #333;
+  border: 1px solid #000;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.50);
   padding: 20px;
   text-align: center;
-  width: 400px;
+  width: 50vh;
   height: 300px;
   margin: 10px;
 
@@ -46,5 +46,9 @@ export const DivForm = styled.div`
   
   button:hover {
     background-color: #084EDC;
+  }
+
+  textarea {
+    margin-top: 10px;
   }
 `

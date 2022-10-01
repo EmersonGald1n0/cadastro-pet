@@ -13,38 +13,38 @@ export default function PetCadastro() {
       dono: "Emerson",
       tel: "(11) 4002-8922",
       // foto
-      observacoes: "Não é agressivo",
+      obs: "Não é agressivo",
     },
   ]);
   
 
   const addCadastro = (e) => {
     e.preventDefault();
-    setNovoCadastro({nome:"", idade:"", raca:"", tamanho:"", dono:"", tel:"", foto:"", observacoes:""})
+    setNovoCadastro({nome:"", idade:"", raca:"", tamanho:"", dono:"", tel:"", foto:"", obs:""})
     setCadastroPets([...cadastroPets, novoCadastro]);
   }
 
-  const [novoCadastro, setNovoCadastro] = useState({nome:"", idade:"", raca:"", tamanho:"", dono:"", tel:"", foto:"", observacoes:""});
+  const [novoCadastro, setNovoCadastro] = useState({nome:"", idade:"", raca:"", tamanho:"", dono:"", tel:"", foto:"", obs:""});
 
   const captura = (e) => {
     const {name, value} = e.target;
 
-    if(name == "nome") {
+    if(name === "nome") {
       setNovoCadastro({...novoCadastro, nome: value});
-    } else if(name == "idade") {
+    } else if(name === "idade") {
       setNovoCadastro({...novoCadastro, idade: value});
-    } else if(name == "raca") {
+    } else if(name === "raca") {
       setNovoCadastro({...novoCadastro, raca: value});
-    } else if(name == "tamanho") {
+    } else if(name === "tamanho") {
       setNovoCadastro({...novoCadastro, tamanho: value});
-    } else if(name == "dono") {
+    } else if(name === "dono") {
       setNovoCadastro({...novoCadastro, dono: value});
-    } else if(name == "tel") {
+    } else if(name === "tel") {
       setNovoCadastro({...novoCadastro, tel: value});
-    } else if(name == "foto") {
+    } else if(name === "foto") {
       setNovoCadastro({...novoCadastro, foto: value});
-    } else if(name == "observacoes") {
-      setNovoCadastro({...novoCadastro, observacoes: value});
+    } else if(name === "obs") {
+      setNovoCadastro({...novoCadastro, obs: value});
     }
   }
 
@@ -65,7 +65,7 @@ export default function PetCadastro() {
           dono = {cad.dono}
           tel = {cad.tel}
           foto = {cad.foto}
-          observacoes = {cad.observacoes}
+          obs = {cad.obs}
         />
       ))}
     </DivLista>

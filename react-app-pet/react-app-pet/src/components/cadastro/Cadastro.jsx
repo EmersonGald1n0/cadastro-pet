@@ -11,7 +11,7 @@ export default function Cadastro(props) {
       <p>{props.dono}</p>
       <p>{props.tel}</p>
       <p>{props.foto}</p>
-      <p>{props.observacoes}</p>
+      <p>{props.obs}</p>
     </DivCadastro>
   );
 }
