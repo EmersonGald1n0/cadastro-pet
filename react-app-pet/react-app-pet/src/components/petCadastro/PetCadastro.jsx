@@ -12,7 +12,6 @@ export default function PetCadastro() {
       tamanho: "Pequeno",
       dono: "Emerson",
       tel: "(11) 4002-8922",
-      // foto
       obs: "Não é agressivo",
     },
   ]);

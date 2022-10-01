@@ -1,10 +1,16 @@
 import React from 'react';
 import { DivCadastro } from '../../style/styled'
+import pet1 from '../../img/pet1.png'
 
 export default function Cadastro(props) {
   return (
     <DivCadastro>
-      <p>{props.nome}</p>
+      <p className='nome'>{props.nome}</p>
+      <div>
+        <figure>
+            <img src={pet1} alt="" width="200px"/>
+        </figure>
+      </div>
       <p>{props.idade}</p>
       <p>{props.raca}</p>
       <p>{props.tamanho}</p>
@@ -15,3 +21,5 @@ export default function Cadastro(props) {
     </DivCadastro>
   );
 }
+
+
